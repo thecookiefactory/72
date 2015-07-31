@@ -6,6 +6,12 @@
     <link rel='stylesheet' type='text/css' href='//thecookiefactory.org/base.css'>
     <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
     <link href='//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet'>
+    <style type='text/css'>
+      .include-section {
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
 </head>
 <body>
 <a href='/'>
@@ -25,7 +31,58 @@
   <param name='movie' value='https://www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf' />
   <param name='flashvars' value='hostname=www.twitch.tv&channel=thecookiefactory&auto_play=true&start_volume=25' />
   </object>
-
+<!--
+  <div class='map-name' id='map_1'>Map 1</div>
+  <div class='map-container'>
+    <div class='map-leftarrow map-arrow-disabled' id='map-1-left' onclick='startImagerollScrolling(this.id, -1);'></div>
+    <div class='map-rightarrow map-arrow-disabled' id='map-1-right' onclick='startImagerollScrolling(this.id, 1);'></div>
+    <div class='map-actionbar' id='map-actionbar-1'>
+      <span class='map-actionbar-button' id='map-moreinfo-1' onclick='animateDataPanel(this.id)'>More info</span>
+          <span class='map-actionbar-button-disabled'>Download</span>
+    </div>
+    <div class='map-imageroll' id='map-1' onload='initialize(this.id);'>
+      <script type='text/javascript'> lendict["map-1"] = {{ map.picturecount }}; initialize("map-1");</script>
+      {% spaceless %}
+        {% for picture in map.pictures %}
+          <div class='map-image'>
+            <div class='map-image-title'><span class='map-image-number'>{{ loop.index }}/{{ loop.length }}</span> - {{ picture.text }}</div>
+            <img class='map-image' src='{{ picture.url }}' alt='{{ picture.text }}'>
+          </div>
+        {% endfor %}
+      {% endspaceless %}
+    </div>
+    <div class='map-data' id='map-data-1'>
+      <div class='map-data-properties'>
+        <span class='map-data-prop map-data-author'>{{ map.author }}</span>
+        <span class='map-data-prop map-data-game'>
+        {% if map.game.steamid %}
+          <a target='_blank' href='http://store.steampowered.com/app/{{ map.game.steamid }}'>{{ map.game.name }}</a>
+        {% else %}
+          {{ map.game.name }}
+        {% endif %}
+        </span>
+        <span class='map-data-prop map-data-dlcount'>{{ map.downloadcount }} times</span>
+        <span class='map-data-prop map-data-date'>{% autoescape false %}{{ map.editdate }}{% endautoescape %}</span>
+        {% if map.comments %}
+            <span class='map-data-prop map-data-topic'>
+            <a href='/forums/{{ map.thread.id }}/'>{{ map.thread.replycount }} {% if map.thread.replycount == 1%} reply</a> {% else %} replies</a> {% endif %}
+            </span>
+        {% endif %}
+      </div>
+      <div class='map-data-desc'>
+        {{ map.text | markdown }}
+      </div>
+      <div class='map-data-actionbar'>
+        <span class='map-actionbar-button' id='map-lessinfo-1' onclick='animateDataPanel(this.id)'>Less info</span>
+        {% if map.link %}
+          <a href='{{ map.link }}' target='_blank'><span class='map-actionbar-button'>Download</span></a>
+        {% else %}
+          <span class='map-actionbar-button-disabled'>Download</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+-->
 </section>
 
 </div>
