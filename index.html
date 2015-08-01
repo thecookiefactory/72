@@ -61,10 +61,44 @@
         <span class='map-data-prop map-data-date'>Today</span>
       </div>
       <div class='map-data-desc'>
-        The basic idea is a 5 cp map in a canyion, which can be really useful in rollout or in attacks. Also added some claustrophobic areas to the map just to give a little variety to the map.
+        The basic idea is a 5cp map in a canyon, which can be really useful in rollout or in attacks. Also added some claustrophobic areas just to give a little variety to the map.
       </div>
       <div class='map-data-actionbar'>
         <span class='map-actionbar-button' id='map-lessinfo-1' onclick='animateDataPanel(this.id)'>Less info</span>
+          <a href='#' target='_blank'><span class='map-actionbar-button'>Download</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class='map-name' id='map_2'>koth_water_tower</div>
+  <div class='map-container'>
+    <div class='map-leftarrow map-arrow-disabled' id='map-2-left' onclick='startImagerollScrolling(this.id, -1);'></div>
+    <div class='map-rightarrow map-arrow-disabled' id='map-2-right' onclick='startImagerollScrolling(this.id, 1);'></div>
+    <div class='map-actionbar' id='map-actionbar-2'>
+      <span class='map-actionbar-button' id='map-moreinfo-2' onclick='animateDataPanel(this.id)'>More info</span>
+          <span class='map-actionbar-button-disabled'>Download</span>
+    </div>
+    <div class='map-imageroll' id='map-2' onload='initialize(this.id);'>
+      <script type='text/javascript'> lendict["map-2"] = 1; initialize("map-2");</script>
+          <div class='map-image'>
+            <div class='map-image-title'><span class='map-image-number'>1/1</span> - Point</div>
+            <img class='map-image' src='/img/water-tower-1.jpg' alt='Second'>
+          </div>
+    </div>
+    <div class='map-data' id='map-data-2'>
+      <div class='map-data-properties'>
+        <span class='map-data-prop map-data-author'>Rabbit</span>
+        <span class='map-data-prop map-data-game'>
+          <a target='_blank' href='http://store.steampowered.com/app/440'>Team Fortress 2</a>
+        </span>
+        <span class='map-data-prop map-data-dlcount'>0 times</span>
+        <span class='map-data-prop map-data-date'>Today</span>
+      </div>
+      <div class='map-data-desc'>
+        A KotH map.
+      </div>
+      <div class='map-data-actionbar'>
+        <span class='map-actionbar-button' id='map-lessinfo-2' onclick='animateDataPanel(this.id)'>Less info</span>
           <a href='#' target='_blank'><span class='map-actionbar-button'>Download</span></a>
       </div>
     </div>
